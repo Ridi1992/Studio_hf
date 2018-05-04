@@ -1,1 +1,6 @@
-333
+BaseReadCarderActivity读卡基类，子类继承BaseReadCarderActivity类，子类发送广播获取基类中接收并处理过的串口数据。
+
+BaseReadCarderActivity类 注册广播指定Action="包名.类名"，计时器设置间隔3秒向DeviceService服务类传递起调界面的Action参数与CMD指令参数，服务类通过广播回传数据到指定的Action类.
+注册广播并接收服务类回传给本类Action的广播数据，处理数据后获得卡号。此时基类得到卡号后，根据子类传递的Action得知子类的包名类名，知晓起调页面，再把卡号数据再以广播的形式传递给指定子类。
+
+RidiActivity自动读卡，子类取得卡号后，自行处理。
