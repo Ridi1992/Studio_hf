@@ -1,3 +1,6 @@
+底层jni库包含C++源文件 ,使用Android studio 需安装 NDK ,配置SDKtools：勾选CMake LLDB 编译C++源文件
+
+
 BaseReadCarderActivity读卡基类，子类继承BaseReadCarderActivity类，子类发送广播获取基类中接收并处理过的串口数据。
 
 BaseReadCarderActivity类 注册广播指定Action="包名.类名"，计时器设置间隔3秒向DeviceService服务类传递起调界面的Action参数与CMD指令参数，服务类通过广播回传数据到指定的Action类.
